@@ -9,7 +9,7 @@ export default function FormSelect({ selectLabel, options, ...rest }) {
   return (
     <div>
       <label
-        Name="block text-sm leading-5 font-medium text-gray-700"
+        className="block text-sm leading-5 font-medium text-gray-700"
         htmlFor={name}
       >
         {selectLabel || name}

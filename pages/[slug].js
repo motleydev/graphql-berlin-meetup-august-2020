@@ -1,6 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import Form from '../components/Form';
 import Footer from '../components/Footer.js';
+import Header from '../components/Header.js';
 
 export async function getStaticProps({ params: variables }) {
   const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
@@ -8,6 +9,9 @@ export async function getStaticProps({ params: variables }) {
     `query page($slug: String!) {
       page(where: {slug: $slug}) {
         title
+        heroTitle
+        heroSubtitle
+        heroCta
         slug
         form {
           id
@@ -71,7 +75,7 @@ export async function getStaticPaths() {
 }
 
 export default function Index({ page }) {
-  const { form } = page;
+  const { form, heroTitle, heroSubtitle, heroCta } = page;
 
   return (
     <main className="">
@@ -254,11 +258,11 @@ Leaving: "duration-100 ease-in"
                 </div>
                 <div>
                   <a
-                    href="#"
+                    href="https://app.graphcms.com/signup"
                     className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
                     role="menuitem"
                   >
-                    Log in
+                    Try GraphCMS
                   </a>
                 </div>
               </div>
@@ -270,7 +274,7 @@ Leaving: "duration-100 ease-in"
                 <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
                   <div>
                     <a
-                      href="https://jobs.graphcms.com"
+                      href={heroCta}
                       className="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                     >
                       <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
@@ -292,14 +296,10 @@ Leaving: "duration-100 ease-in"
                       </svg>
                     </a>
                     <h2 className="mt-4 text-4xl tracking-tight leading-10 font-extrabold text-white sm:mt-5 sm:leading-none sm:text-6xl lg:mt-6 lg:text-5xl xl:text-6xl">
-                      Data to enrich your
-                      <br className="hidden md:inline" />
-                      <span className="text-indigo-400">online business</span>
+                      {heroTitle}
                     </h2>
                     <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                      irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-                      veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+                      {heroSubtitle}
                     </p>
                     <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
                       Used by

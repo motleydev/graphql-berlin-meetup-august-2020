@@ -10,10 +10,13 @@ export default function FormCheckbox({ checkboxLabel, ...rest }) {
         ref={register({ required: rest.required })}
         id={name}
         type="checkbox"
-        class="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
+        className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"
         {...rest}
       />
-      <label htmlFor={name} class="ml-2 block text-sm leading-5 text-gray-900">
+      <label
+        htmlFor={name}
+        className="ml-2 block text-sm leading-5 text-gray-900"
+      >
         {checkboxLabel || name}
       </label>
     </div>
