@@ -3,7 +3,7 @@
 .cache
 node_modules
 public
-.env
+.env.*
 .DS_Store
 package-lock.json
 npm-debug.log*
