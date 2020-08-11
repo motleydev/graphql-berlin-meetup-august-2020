@@ -14,5 +14,8 @@
     "react-dom": "16.13.1",
     "react-hook-form": "5.7.2",
     "tailwindcss": "^1.5.1"
+  },
+  "devDependencies": {
+    "postcss-flexbugs-fixes": "^4.2.1"
   }
 }
