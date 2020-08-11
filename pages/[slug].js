@@ -1,5 +1,4 @@
 import { GraphQLClient } from 'graphql-request';
-
 import Form from '../components/Form';
 import Footer from '../components/Footer.js';
 
@@ -58,6 +57,7 @@ export async function getStaticProps({ params: variables }) {
 }
 
 export async function getStaticPaths() {
+  const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT);
   const { pages } = await graphcms.request(`{
     pages {
       slug
