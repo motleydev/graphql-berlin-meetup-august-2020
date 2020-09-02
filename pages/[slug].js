@@ -79,212 +79,24 @@ export default function Index({ page }) {
 
   return (
     <main className="">
-      <div className="relative bg-gray-800 overflow-hidden">
-        <div className="hidden sm:block sm:absolute sm:inset-0">
-          <svg
-            className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0"
-            width={364}
-            height={384}
-            viewBox="0 0 364 384"
-            fill="none"
-          >
-            <defs>
-              <pattern
-                id="eab71dd9-9d7a-47bd-8044-256344ee00d0"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect x={0} y={0} width={4} height={4} fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect
-              width={364}
-              height={384}
-              fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)"
-            />
-          </svg>
-        </div>
-        <div className="relative pt-6 pb-12 sm:pb-32">
-          <nav className="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
-            <div className="flex items-center flex-1">
-              <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#" aria-label="Home">
-                  <img
-                    className="h-8 w-auto sm:h-10"
-                    src="https://tailwindui.com/img/logos/workflow-mark-on-dark.svg"
-                    alt="Logo"
-                  />
-                </a>
-                <div className="-mr-2 flex items-center md:hidden">
-                  <button
-                    type="button"
-                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-700 focus:outline-none focus:bg-gray-700 transition duration-150 ease-in-out"
-                    id="main-menu"
-                    aria-label="Main menu"
-                    aria-haspopup="true"
-                  >
-                    <svg
-                      className="h-6 w-6"
-                      stroke="currentColor"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div className="hidden space-x-10 md:flex md:ml-10">
-                <a
-                  href="#"
-                  className="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out"
-                >
-                  Product
-                </a>
-                <a
-                  href="#"
-                  className="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out"
-                >
-                  Company
-                </a>
-              </div>
-            </div>
-            <div className="hidden md:flex">
-              <a
-                href="https://app.graphcms.com/signup"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray focus:border-gray-700 active:bg-gray-700 transition duration-150 ease-in-out"
-              >
-                Try GraphCMS!
-              </a>
-            </div>
-          </nav>
-          {/*
-Mobile menu, show/hide based on menu open state.
-
-Entering: "duration-150 ease-out"
-  From: "opacity-0 scale-95"
-  To: "opacity-100 scale-100"
-Leaving: "duration-100 ease-in"
-  From: "opacity-100 scale-100"
-  To: "opacity-0 scale-95"
-    */}
-          <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-            <div className="rounded-lg shadow-md">
-              <div
-                className="rounded-lg bg-white shadow-xs overflow-hidden"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="main-menu"
-              >
-                <div className="px-5 pt-4 flex items-center justify-between">
-                  <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg"
-                      alt
-                    />
-                  </div>
-                  <div className="-mr-2">
-                    <button
-                      type="button"
-                      className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
-                      aria-label="Close menu"
-                    >
-                      <svg
-                        className="h-6 w-6"
-                        stroke="currentColor"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </div>
-                <div className="space-y-1 px-2 pt-2 pb-3">
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Product
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Features
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Marketplace
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Company
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://app.graphcms.com/signup"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out"
-                    role="menuitem"
-                  >
-                    Try GraphCMS
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="relative pt-6 overflow-hidden bg-gray-800">
+        <Header />
+        <div className="relative pb-12 sm:pb-32">
           <main className="mt-8 sm:mt-16 md:mt-20 lg:mt-24">
-            <div className="mx-auto max-w-screen-xl">
+            <div className="max-w-screen-xl mx-auto">
               <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
                   <div>
                     <a
                       href={heroCta}
-                      className="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+                      className="inline-flex items-center p-1 pr-2 text-white bg-gray-900 rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
                     >
                       <span className="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
-                        We're hiring
+                        Free Stickers
                       </span>
-                      <span className="ml-4 text-sm leading-5">
-                        Visit our careers page
-                      </span>
+                      <span className="ml-4 text-sm leading-5">Sign Up</span>
                       <svg
-                        className="ml-2 w-5 h-5 text-gray-500"
+                        className="w-5 h-5 ml-2 text-gray-500"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -295,16 +107,16 @@ Leaving: "duration-100 ease-in"
                         />
                       </svg>
                     </a>
-                    <h2 className="mt-4 text-4xl tracking-tight leading-10 font-extrabold text-white sm:mt-5 sm:leading-none sm:text-6xl lg:mt-6 lg:text-5xl xl:text-6xl">
+                    <h2 className="mt-4 text-4xl font-extrabold leading-10 tracking-tight text-white sm:mt-5 sm:leading-none sm:text-6xl lg:mt-6 lg:text-5xl xl:text-6xl">
                       {heroTitle}
                     </h2>
                     <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                       {heroSubtitle}
                     </p>
-                    <p className="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">
+                    <p className="mt-8 text-sm font-semibold tracking-wide text-white uppercase sm:mt-10">
                       Used by
                     </p>
-                    <div className="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                    <div className="w-full mt-5 sm:mx-auto sm:max-w-lg lg:ml-0">
                       <div className="flex flex-wrap items-start justify-between">
                         <div className="flex justify-center px-1">
                           <img
@@ -337,10 +149,10 @@ Leaving: "duration-100 ease-in"
           </main>
         </div>
       </div>
-      <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
-        <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 overflow-hidden bg-gray-50 md:py-20 lg:py-24">
+        <div className="relative max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
           <svg
-            className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
+            className="absolute transform top-full right-full translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2"
             width={404}
             height={404}
             fill="none"
@@ -375,7 +187,7 @@ Leaving: "duration-100 ease-in"
             />
           </svg>
           <div className="relative">
-            <svg className="mx-auto h-10" fill="none" viewBox="0 0 180 40">
+            <svg className="h-10 mx-auto" fill="none" viewBox="0 0 180 40">
               <path
                 fill="#2D3748"
                 d="M59.267 32.642h3.718L66.087 21.7l3.126 10.94h3.718l4.642-16.576h-3.434l-3.173 12.29-3.481-12.29H64.69l-3.457 12.29-3.174-12.29h-3.433l4.641 16.576zM83.551 32.973c3.481 0 6.276-2.723 6.276-6.252 0-3.528-2.794-6.252-6.276-6.252-3.48 0-6.252 2.724-6.252 6.252 0 3.529 2.771 6.252 6.252 6.252zm0-2.984c-1.8 0-3.197-1.35-3.197-3.268 0-1.918 1.398-3.268 3.197-3.268 1.824 0 3.221 1.35 3.221 3.268 0 1.918-1.397 3.268-3.22 3.268zM95.031 22.837v-2.036h-3.055v11.84h3.055v-5.66c0-2.486 2.013-3.196 3.6-3.007v-3.41c-1.492 0-2.984.663-3.6 2.273zM111.334 32.642l-4.902-5.992 4.76-5.85h-3.647l-4.073 5.21v-9.946h-3.055v16.578h3.055v-5.376l4.31 5.376h3.552z"
@@ -392,7 +204,7 @@ Leaving: "duration-100 ease-in"
               />
             </svg>
             <blockquote className="mt-8">
-              <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+              <div className="max-w-3xl mx-auto text-2xl font-medium leading-9 text-center text-gray-900">
                 <p>
                   “Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
                   expedita voluptas culpa sapiente alias molestiae. Numquam
@@ -403,23 +215,22 @@ Leaving: "duration-100 ease-in"
                 <div className="md:flex md:items-center md:justify-center">
                   <div className="md:flex-shrink-0">
                     <img
-                      className="mx-auto h-10 w-10 rounded-full"
+                      className="w-10 h-10 mx-auto rounded-full"
                       src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt
                     />
                   </div>
                   <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                    <div className="text-base leading-6 font-medium text-gray-900">
+                    <div className="text-base font-medium leading-6 text-gray-900">
                       Judith Black
                     </div>
                     <svg
-                      className="hidden md:block mx-1 h-5 w-5 text-indigo-600"
+                      className="hidden w-5 h-5 mx-1 text-indigo-600 md:block"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M11 0h3L9 20H6l5-20z" />
                     </svg>
-                    <div className="text-base leading-6 font-medium text-gray-500">
+                    <div className="text-base font-medium leading-6 text-gray-500">
                       CEO, Workcation
                     </div>
                   </div>
