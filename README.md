@@ -4,7 +4,7 @@ First, to see the prior art and foundation to this project, [check out the excel
 
 You can see the talk I gave going over this example at the following video.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DoR7h88Xlvg?start=4108" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](images/thumb.png?raw=true)](https://youtu.be/DoR7h88Xlvg?t=4108)
 
 Ultimately, the only content we've added on top of that is some opinionated styling and hero content for our landing page.
 
